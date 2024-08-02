@@ -1,0 +1,58 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Currency Converter</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </head>
+        <body>
+
+            <div class="main">
+                <h1 style="color: white; margin-left: 160px; margin-bottom: 30px;">Currency Converter</h1>
+
+                <form>
+                <div>
+                <h1 style="margin-left: 10px; color: rgb(211, 228, 194);">Enter Amount to Exhange:</h1>
+                <input class="amount" style="margin-left: 10px;padding-left: 10px ; height: 30px; font-size: x-large;" type="text" value="100">
+                </div>
+                
+            <div class="from-to">
+            
+                <div class="from imgParent">
+                    <h1 style="color: rgb(217, 215, 230);">From</h1>
+                    <img class="img1" src="https://flagsapi.com/US/flat/64.png">
+                    
+                    <select name="from" class="select" id="from">
+        
+                    </select>
+                </div>
+            
+                <i class="fa-solid fa-right-left"style="font-size: x-large;"></i>
+                <div class="to imgParent">
+                    <h1 style="color:rgb(217, 215, 230)">To</h1>
+                    <img class="img" src="https://flagsapi.com/PK/flat/64.png">
+                    <select name="to" class="select" id="to">
+        
+                    </select>
+                </div>
+            </div>
+                <button class="calculate-button">Get Exchange Rate</button>
+            </form>
+            <div class="result">
+            <p class="result">Result</p>
+            </div>
+
+            </div>
+
+
+
+
+
+
+            <script src="country-list.js"></script>
+            <script src="currency-converter-1.js"></script>
+        
+        </body>
+        </html>

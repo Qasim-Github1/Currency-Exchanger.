@@ -1,12 +1,10 @@
 let countrySelection = document.querySelectorAll(".select"); 
  let exchangeButton = document.querySelector(".calculate-button");
 let amountValue = document.querySelector(".amount")
-console.log(amountValue.value);
+const fromCurr = document.querySelector("#from")
+const toCurr = document.querySelector("#to")
+let resultPara = document.querySelector(".resultP")
 
-
-  const fromCurr = document.querySelector("#from")
-  const toCurr = document.querySelector("#to")
- let resultPara = document.querySelector(".resultP")
 
 
     for (country of countrySelection)
@@ -49,9 +47,16 @@ console.log(amountValue.value);
 
     
     exchangeButton.addEventListener("click", async (e)=>{
-        e.preventDefault();
-        console.log(fromCurr.value, toCurr.value);
 
+        if (amountValue.value <= 0 || amountValue.value === "")
+            {
+                alert("Pease enter valid positive value.")
+                amountValue.value = ""
+                e.preventDefault();
+            }
+            else {
+            
+        e.preventDefault();
         var myHeaders = new Headers();
         myHeaders.append("apikey", "fSF4fkrt3CfirpuwZcxW0F2GS1eWDJTq");
     
@@ -68,6 +73,7 @@ console.log(amountValue.value);
             resultPara.innerText =  `${finalResult.toFixed(2)} ${toCurr.value}` ;
         })
         .catch(error => console.log('error', error));
+    }
     
     })
         
